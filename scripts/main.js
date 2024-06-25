@@ -330,3 +330,451 @@ function cambiarEstadoMensaje(n){
     
 }
 
+
+//# Chatbox
+// document.getElementById('send-button').addEventListener('click', sendMessage);
+
+// document.getElementById('chat-input').addEventListener('keypress', function(event) {
+//     if (event.key === 'Enter') {
+//         sendMessage();
+//     }
+// });
+
+// function sendMessage() {
+//     const chatInput = document.getElementById('chat-input');
+//     const messageText = chatInput.value.trim();
+    
+//     if (messageText !== '') {
+//         addMessageBubble(messageText, 'sent');
+//         chatInput.value = '';
+//     }
+// }
+
+function addMessageBubble(text, type) {
+    const chatBody = document.getElementById('chat-body');
+    const messageBubble = document.createElement('div');
+    messageBubble.classList.add('message', type);
+    messageBubble.textContent = text;
+    chatBody.appendChild(messageBubble);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// Función para cambiar la paleta de colores
+function changeColorTheme(hour) {
+    const chatContainer = document.getElementById('chat-container');
+    if (hour >= 6 && hour < 12) {
+        // Mañana
+        chatContainer.className = 'chat-container morning-theme';
+    } else if (hour >= 12 && hour < 18) {
+        // Tarde
+        chatContainer.className = 'chat-container afternoon-theme';
+    } else if (hour >= 18 && hour < 21) {
+        // Atardecer
+        chatContainer.className = 'chat-container evening-theme';
+    } else {
+        // Noche
+        chatContainer.className = 'chat-container night-theme';
+    }
+}
+
+// Llamar la función con la hora actual
+// const currentHour = new Date().getHours();
+// changeColorTheme(currentHour);
+changeColorTheme(19);
+
+// Ejemplo de agregar un mensaje recibido
+// addMessageBubble('Domingo, 14', 'sent');
+addMessageBubble('Bienvenida a mi mente jaja.', 'received');
+// addMessageBubble('Escribir esto realmente me está ayudando a no tener esos pensamientos intrusivos, a las 6:51pm recibí tu mensaje de contestación a la imagen que te envié. Como todos los días, estoy esperando a recibir otro mensajito tuyo como solías hacer antes, pero ya me estoy acostumbrado a que no jaja, creo que buscaré otro bonito reel más al rato en facebook y te lo enviaré', 'received');
+// changeColorTheme(22);
+
+function HoraYPensamiento(h,p,t){
+    changeColorTheme(h);
+    addMessageBubble(p,t);
+}
+
+function cambiarEstadoBitacora(){
+    switch (ContadorBitacora) {
+        case 0:
+            changeColorTheme(19);
+            addMessageBubble('Domingo, 16', 'sent');
+            break;
+            
+        case 1:
+            HoraYPensamiento(19,'7:17pm - Escribir esto realmente me está ayudando a no tener esos pensamientos intrusivos, a las 6:51pm recibí tu mensaje de contestación a la imagen que te envié. Como todos los días, estoy esperando a recibir otro mensajito tuyo como solías hacer antes, pero ya me estoy acostumbrado a que no jaja, creo que buscaré otro bonito reel más al rato en facebook y te lo enviaré.', 'received');
+            break;
+
+        case 2:
+            HoraYPensamiento(19,'7:34pm - Sonó el celular, pero era de grupo. (Aquí si aplica el meme ese \'cuando suena una notificación pero no es de ella\' jaja).', 'received');
+            break;
+
+        case 3:
+            HoraYPensamiento(19,'Estoy escuchando Heart To Heart [https://youtu.be/qBoQzo98EpQ?si=wLO16e9OcWa4qYGo] y al escuchar el minuto 1:03 me pegó una tristéza profunda escribiendo el mensaje, esperé a que términara la canción para escribir esto.', 'received');
+            break;
+    
+        case 4:
+            HoraYPensamiento(19,'7:57pm - Escuché Someone To Spend Time With [https://youtu.be/0C1cVATvlQk?si=gygumRCUthbGAE_2], una canción que me encanta por el ritmo lento y suave, la letra está hermosa y te la dedico como las anteriores que te he enviado, está en inglés pero te la dejo con subtitulos por si quieres prestar atención...', 'received');
+            break;
+
+        case 5:
+            HoraYPensamiento(20,'8:11pm - Rises the moon [https://youtu.be/-2yAEUp9v6M?si=nsMpG1CzwCKnuuVO], aunque no le entienda, solo puedo decir que me encanta ese ritmo.', 'received');
+            break;
+
+        case 6:
+            HoraYPensamiento(20,'8:28pm - Besame Mucho [https://youtu.be/7ejA6VDP4Ps?si=hGPuFl5dF0CUc2MO], me recordó a que ya quiero enviarte el reel pero creo que me aguataré hasta las 9 o mas tardecito, no quiero verme tan desesperado.', 'received');
+            break;
+
+        case 7:
+            HoraYPensamiento(20,'8:30pm - Ylang Ylang [https://youtu.be/4TChuQgE8pw?si=w7sD-XZLYjDGrBAt], ptm esta si pegó duro jaja, me detendré a contemplarla un poco y seguiré.', 'received');
+            break;
+
+        case 8:
+            HoraYPensamiento(21,'9:00pm - Ya son las 9 y todavía sigo esperando un mensaje tuyo jaja, buscaré el reel y te lo enviaré, creo que también te preguntaré sobre tu día y así, creo que me responderás en 1 hora o más así que es perfecto para seguir detallando este mensaje.', 'received');
+            break;
+
+        case 9:
+            HoraYPensamiento(21,'9:02pm - Estoy escuchando YKWIM? [https://youtu.be/_C9rRLDimfQ?si=bn5cD1nkafgBF8Dw], tan solo el principio repentino me hizo recordarte por alguna razón, me duele esperar ese mensaje... me duele mucho. No sé si solo lo estoy sobrepensando pero es así como sentias esperar un mensaje mío?, perdoname por tanto, jamás me imaginé este dolor.', 'received');
+            break;
+
+        case 10:
+            HoraYPensamiento(21,'9:15pm - Te envié uno algo gracioso jaja, te preguntaré cómo estuvo tu día cuando respondas para mantenerte un ratito más jaja.', 'received');
+            break;
+
+        case 11:
+            HoraYPensamiento(21,'9:30pm - Lover is day [https://youtu.be/ZCzPoj1TZDc?si=mEhs2PC4Sj-yRnjO], una canción que me cautivó con ese ritmo tan suave, la primera vez que lo escuché fue en el 2017, a día de hoy no ha dejado de gustarme. Recientemente escuché el significado de la letra y cuanta coincidencia jaja [https://youtube.com/shorts/CQYMIRTZZgk?si=LfVaf_esaP7pROqz].', 'received');
+            break;
+
+        case 12:
+            HoraYPensamiento(21,'9:41pm - Esperando aún un mensaje tuyo, se siente como si hubiese pasado mucho más tiempo, incluso aún entreteniendome escribiendo este mensaje. Me pregunto que estarás haciendo?, realmente espero que estés bien. Desde el viernes me pregunto la razón por la cual cambiaste tu forma de ser conmigo... se me vienen tantas cosas a la cabeza y yo supongo porque también yo solía responderte bastante tarde, si es así ahora sé lo que sentiste y estoy dispuesto a pagar esa penitencia hasta que me dés una respuesta. También quisiera explicarte que en esos momentos yo estaba luchando con mi mente y no quería enviarte mensajes estando en mi estado máximo de ansiedad.', 'received');
+            break;
+
+        case 13:
+            HoraYPensamiento(21,'9:55pm - Cómo me estoy aguantando las ganas de preguntarte directamente qué es lo que pasa, pero quiero remarcar este sentimiento para no repetirlo más.', 'received');
+            break;
+
+        case 14:
+            HoraYPensamiento(22,'10:01pm - Suena Young [https://youtu.be/oAur1xQx-sc?si=KEA6-QuWZyeHyVSI], revisé el celular y ni una reacción, perdoname por tanto dolor que te causé, realmente te extraño. Extraño esa personita tan energética y apasionada que me mostraste alguna vez.', 'received');
+            break;
+
+        case 15:
+            HoraYPensamiento(22,'10:11pm - Estoy en el chat para recordar algo, gracias por contestar ♥, solo deja sigo escribiendo algo y te pregunto sobre tu día.', 'received');
+            break;
+
+        case 16:
+            HoraYPensamiento(22,'10:25pm - Te he contestado, ahora a esperar a qué me respondas en 1 hora jaja.', 'received');
+            break;
+
+        case 17:
+            HoraYPensamiento(22,'10:29pm, Decidí enviarte un reel, y un te amo, sé que suena simple, pero realmente te amo... te amo más de lo que puedes imaginar pequeña.', 'received');
+            break;
+
+        case 18:
+            HoraYPensamiento(22,'Quiero preguntarte si mañana irás al negocio para acompañarte un rato, el viernes quería ir pero como tardabas en responder supuse que estabas ocupada, y aparte no sabía si estaba tu mamí, ya en la noche que me dijiste que no había ido sentí una oportunidad más que desperdiciada.', 'received');
+            break;
+
+        case 19:
+            HoraYPensamiento(22,'10:36pm - Constantemente, mi mente juega conmigo y me hace pensar en que si habrá otra persona la cuál te hace reir de la forma en que yo solía hacerlo. Son los traumas que me generó mi padre, hasta la traición y decepción viene de la persona que menos esperarías. Y bueno, si es así aceptaré mi derrota porque quiero que seas feliz incluso si no es conmigo, solo te pido de favor que no dejes de hacer las cosas buenas como cuidarte, beber suficiente agua, querer mucho a tu mamí, no sentirte sola y liberar tus sentimientos de vez en cuando.', 'received');
+            break;
+
+        case 20:
+            HoraYPensamiento(23,'11:08pm - Una notificación de facebook jaja.', 'received');
+            break;
+
+        case 21:
+            HoraYPensamiento(22,'11:31pm - \'Iré a descansar amor, ten una linda noche\', solo eso me puede salir con la tristeza que siento en mi corazón, descansaré por ahora y seguiré mañana, ya no me salen más palabras.', 'received');
+            break;
+
+        case 22:
+            changeColorTheme(5);
+            addMessageBubble('Lunes, 17', 'sent');
+            break;
+
+        case 23:
+            HoraYPensamiento(5,'Originalmente no iba a escribir cosas que suelo hacer en la mañana pero algo me nació. Aprovecharé a escribirlo antes de que se me olvide.', 'received');
+            break;
+
+        case 24:
+            HoraYPensamiento(5,'5:52am - Te acabo de mandar tu mensaje de buenos días y un reel rápido que encontré ahí, ese reel ya te lo envié pero sinceramente cada vez me cuesta encontrar uno que exprese mis sentimientos a casi la perfección. Quisiera que supieras que todo los que te mando es realmente lo que siento, y en caso de que no lo haga trato de aclararlo.', 'received');
+            break;
+
+        case 25:
+            HoraYPensamiento(5,'5:55am - Hoy me desperté diferente a otros días, está demás decirlo pero yo suelo hacer dos cosas al despertar, ir al baño ya que de alguna u otra forma mi cuerpo se acostumbró a eso jaja, y si no tengo ganas más tarde lo hago. Lo otro que también hago al despertarme es escribirte los mensajes de buenos días, esa acción la ví en un comentario de una publicación de facebook y quise adoptarla ,decía que su novio solía mandarle siempre un mensaje a la hora que se despertaba, que por lo general era a las 5 de la mañana, entonces nació en mí ese gesto y supuse que tal vez te gustaría, además de buscar y agregar un bonito reel de facebook jaja. Con respecto a hoy, me levanté aproximadamente a las 4:31am, y lo primero que hice fue revisar si me habias contestado, me dolió tanto que ni una reacción me dieras, en verdad quisiera preguntarte que es lo que sucede hasta por medio de Adrian, pero debo cumplir mi penitencia de seguir remarcando este sentimiento en mí. En un instante fuí a escuchar la lista de reproducción que te hice para calmar más rápido este sentimiento. Desde el viernes, me llegó ese presentimiento de que cada día me contestarás menos hasta el punto de ya no contestarme, me dolerá saber que no me equivoqué hasta que finalmente yo esté hablando solo, o en el peor de los casos, que me bloquees, si llega a ser así tengo planeado hacerte llegar el mensaje por medio de Adrian el viernes, cómo ya tengo práctica en sentirme solo y guardar todo lo que pienso y siento no debería ser un problema para mí jaja [Tan equívocado no pude estar].', 'received');
+            break;
+
+        case 26:
+            HoraYPensamiento(5,'Te extraño.', 'received');
+            break;
+
+        case 27:
+            HoraYPensamiento(6,'6:10am - Escribiendo esto me llegó una idea de que en vez de mostrarte esta bitácora por texto o en un pdf te lo pueda mostrar en un programa, en java es el que más me gustaría hacerlo pero no creo que uses mucho tu computadora y dudo que te dé ganas de instalar el programa, en android sería ya que usas el celular frecuentemente, pero en android es frustrante de programar y todavía me arriesgo a que la aplicación no abra en tu cel por x razón. Lo haré en página web, debido a que es un programa simple que se abrirá tanto en pc como en celular, además darle un diseño bonito ahí es bastante facíl aunque no soy buen diseñador jaja, creo que es el más adecuado, será un bonito proyectito y como hace tiempo que no programo, será un buen ejercicio, que se vea que no me hice pndjo 8 semestres en la carrera jaja, minimo para algo debo de servir. Espero que sepas que es algo especial y respetes esa decisión mía de privacidad porque lo estoy haciendo solo para tí.', 'received');
+            break;
+
+        case 28:
+            HoraYPensamiento(6,'6:44am - Ya he terminado de escribir, me dormiré otro ratito porque esperarte a qué contestes me hace sobrepensar más, luego recuerdo que te despiertas tarde jaja. Trataré de entretenerme hoy con otras cosas que tengo pendiente y he dejado de hacer además de iniciar con este pequeño proyecto ♥.', 'received');
+            break;
+
+        case 29:
+            HoraYPensamiento(7,'7:09am - A mimir que la mente es poderosa y si te dejas te puede ganar jaja.', 'received');
+            break;
+
+        case 30:
+            HoraYPensamiento(8,'8:58am - Justo me desperté hace un par de minutos y me llegó tu mensaje, no sé si es porque estaré sentido o algo pero ese mensaje se sintió un tanto diferente a los últimos y eso me hizo feliz por un instante.', 'received');
+            break;
+
+        case 31:
+            HoraYPensamiento(8,'En mi siesta soñé contigo, es la segunda vez que lo hago, soñé algo relacionado a que me llegaba unos mensajes tuyos, donde demostrabas esa pasión y amor de antes, ya no recuerdo que es exactamente pero fue lindo, al poco me llegó tu mensaje jaja.', 'received');
+            break;
+
+        case 32:
+            HoraYPensamiento(10,'10:09am - Empecé el proyecto hace como media hora y no sé que hacer jaja, se supone que es lo más facíl del mundo y simplemente no doy con nada, y a diferencia de otros días no me siento tan decaido, quizás es porque te quiero preguntar si puedo ir a hoy a visitarte al local, pero me da pena ser tan directo. Si voy hoy tendría que mostrarte el proyecto... no sé que hacer jaja. Ayudaaa.', 'received');
+            break;
+
+        case 33:
+            HoraYPensamiento(10,'10:43am - Ya va agarrando forma este pedo jeje. (El proyecto)', 'received');
+            break;
+
+        case 34:
+            HoraYPensamiento(11,'11:01am - Te envié un mensaje y esta vez lo contestaste rápido... hasta se me hace raro ya jaja. Gracias ♥.', 'received');
+            break;
+
+        case 35:
+            HoraYPensamiento(11,'11:05am - No quiero preguntarte si puedo ir jaja, ahhh.', 'received');
+            break;
+
+        case 36:
+            HoraYPensamiento(12,'12:06am - Acabo de bañarme, revisé el celular y parece que me emocioné demasiado. Tal vez estás ocupada, quizás te desocupes en un par de horas. Siempre que me pasa así recuerdo que yo alguna vez te lo hice, como parte de mi penitencia.', 'received');
+            break;
+
+        case 37:
+            HoraYPensamiento(12,'Seguiré programando jaja.', 'received');
+            break;
+
+        case 38:
+            HoraYPensamiento(16,'4:15pm - He tocado fondo y sentí un impulso de valentía, quiero vivir, quiero sentir la felicidad que alguna vez tuve, quiero crecer como persona, quiero llegar a ser padre, quiero llegar a hacer felices a las personas, quiero hacer feliz  y orgullosa a mi madre, quiero hacer que lo nuestro funcione. Y para eso daré un paso adelante, buscaré ayuda y apoyo con alguien en quien sé que puedo confiar, no quiero morir deprimido sin antes haber vivido realmente. Ahora entiendo que no puedo con todo solo, es hora de tragarme mi orgullo.', 'received');
+            break;
+
+        case 39:
+            HoraYPensamiento(19,'7:48pm - Hoy me ayudó un amigo al que no me molestaría en lo absoluto llamarlo un hermano. Muchas gracias por prestarme un poco de tu tiempo y te pido mis más sinceras disculpas por hacerte ver esta parte de mí, no quiero darte más preocupaciones de lo que ya tienes. Pediré a Dios eternas bendiciones para tí hermano.', 'received');
+            break;
+
+        case 40:
+            changeColorTheme(2);
+            addMessageBubble('Martes, 18', 'sent');
+            break;
+
+        case 41:
+            HoraYPensamiento(2,'2:15am, En un principio estaba decidido no escribir esto. Ayer por la tarde me llegó un pensamiento que fue el que me hizo tocar fondo, este pensamiento fue diferente al de los demás, sobretodo porque es uno de mis mayores temores pero que en caso de ser cierto asumiré toda y la total culpa, incluso me encargaré de remarcalo con cualquier persona que me pregunte de que yo siempre fuí el responsable de tal acto. \nDespues de sobrepensar algunas cosas, llegué a una conclusión que ya había yo pensado antes pero que ahora por alguna razón me pegó fuerte y sin previo aviso. De acuerdo a todo lo que yo he hecho y no he hecho por tí, todas esas heridas que alguna vez te causé ya sea realizando algo de forma verbal o cosas que alguna vez me pediste de alguna u otra forma y yo jamás hice algo al respecto fueron causando con el tiempo una hemorragia en aquel amor y pasión que tanto te esmeraste en demostrarme, finalmente termiron por matar tu interés en mí. Es duro para mí pensar eso, pero creeme que yo aceptaré más que gustoso tal decisión, pues razones sobran para justificar esa respuesta tuya. Puedo incluso imaginarme cuando te preguntan por mí y la profunda pena que haz de sentir respondiendo sabiendo que ni un solo maldito día te he ido a ver, viendo cómo tú demostrabas ante los demás lo tanto que me quisiste y yo siempre me quedé ahí parado sin hacer nada al respecto. Te he fallado Dani, te he fallado, no solo a tí, si no a mí, mis principios, mis creencias, mi orgullo, quiero que sepas algo que quiero que te quede muy claro y es que no quiero que bajo ni una circunstacia incluso en lo más mínimo te sientas culpable de todo esto que está pasando pues como bien ambos sabemos, yo fuí el responsable principal de acabar terminando esa pasión tuya. Apoyo y estoy totalmente de acuerdo que menciones que en cuando empezaste a ser cortante y distante conmigo yo busqué de forma hipócrita y desesperada tu atención en los últimos días, aquella vergüenza será mi nueva penitencia que llevaré conmigo hasta el final de mis tiempos. Te lo agradeceré de corazón, pues con eso y más cosas me habrás ayudado a saber el tipo de persona que soy realmente y que sin tu ayuda jamás me hubiese dado cuenta. \nFinalmente despues de más de un mes de malas experiencias y desiluciones que te causé y cómo el más máximo acto de amor que yo te puedo otorgar, te libero de mí. Solo te pediré que no dejes las buenas costumbres que formaste conmigo como tomar más agua, tratar de hacer otras cosas diferentes a las que ya haces y querer mejorar en la cocina, no sé si esto último lo has hecho pero espero que aún lo tengas en mente, te puedo asegurar que tu futura pareja de vida le encantará ese detalle jaja. Siempre quise saber más de tí para ver en qué más te podría ayudar y apoyar, pero por más que lo intenté jamás ví un avance, tal vez lo hice mal o por mis acciones no conseguí esa confianza, no lo sé. Solo te puedo asegurar que eres una persona muy bella mucho más allá de lo físico, lás palabras me sobran para describir esa belleza, tanto que ya ni puedo pensar en cómo empezaría. En este instánte solo puedo pensar en esa risita que tanto me encantó, ahora la recordaré con mucha tristeza sabiendo que yo mismo me la arrebaté. Solo deseo que la persona con quien estés en un futuro le demuestres de forma pura y sincera el mismo interés y pasión que demostraste conmigo y él te responda de la misma forma, no quiero haberte creado esa inseguridad al querer mostrar tus sentimientos, jamás me lo perdonaría.', 'received');
+            break;
+
+        case 42:
+            HoraYPensamiento(3,'3:57am - Hoy iré a tu negocio y trataré de aclarar las cosas entre ambos para ya terminar este sufrimiento que he causado desde el inicio de lo nuestro. Aceptaré cualquier destino.', 'received');
+            break;
+
+        case 43:
+            HoraYPensamiento(15,'3:03pm - Ta cerrado, quedé 🤡.', 'received');
+            break;
+
+        case 44:
+            HoraYPensamiento(20,'8:09pm - Cómo resumen de todo lo que he hecho este día... Generalmente no soy una persona que haga muchas cosas interesantes en su día a día, sin embargo hoy por más que traté de distraerme, de no pensar en tí, no pude, incluso con las cosas que se supone me gusta hacer, no funcionó, ahora las palabras \'no puedo dejar de pensar en tí\' no las podré ver con la simpleza con la que solía verlas.', 'received');
+            break;
+
+        case 45:
+            HoraYPensamiento(20,'8:20pm - Te he enviado un mensaje simple... uno que incluso con su simpleza demuestra tanto, sé que lo sabes. Me aterra saber como contestarás, si con el mismo sentimiento, o con cierta indiferencia... No te molestaré hasta el viernes, mi corazón ya no dá más para fingir que estoy bien, recurriré un poco a mi orgullo para cumplir esto.', 'received');
+            break;
+
+        case 46:
+            HoraYPensamiento(20,'8:25pm - Me mata la tristeza como una vez solo lo hizo en mi vida.', 'received');
+            break;
+
+        case 47:
+            HoraYPensamiento(20,'8:35pm - En verdad siento que he matado esa pobre personita que tanto me encantó, siento que hablo con alguien a quien nunca conocí. Está semana ha sido tan dificíl que parece eterna, es injusto porque el tiempo que pasé a tu lado fue tan rápido. De qué sirve quejarme?, la vida siempre ha sido tan injusta.', 'received');
+            break;
+
+        case 48:
+            HoraYPensamiento(20,'8:38pm - Realmente yo te traté así?, ya ni siquiera me considero digno de estár frente en tí. Escucharé la playlist que te he hecho para soltarme un poco.', 'received');
+            break;
+
+        case 49:
+            HoraYPensamiento(20,'8:41pm - Te extraño tanto.', 'received');
+            break;
+
+        case 50:
+            HoraYPensamiento(20,'8:42pm - Extraño tus ojos.', 'received');
+            break;
+
+        case 51:
+            HoraYPensamiento(20,'8:43pm - Extraño tus cachetes.', 'received');
+            break;
+
+        case 52:
+            HoraYPensamiento(20,'8:44pm - Extraño tus labios.', 'received');
+            break;
+
+        case 53:
+            HoraYPensamiento(20,'8:45pm - Extraño tu felicidad.', 'received');
+            break;
+
+        case 54:
+            HoraYPensamiento(20,'8:46pm - Extraño tus celos.', 'received');
+            break;
+
+        case 55:
+            HoraYPensamiento(20, '8:47pm - Extraño que me \"molestes\".', 'received');
+            break;
+
+        case 56:
+            HoraYPensamiento(20,'8:48pm - Extraño acariciar tu pelo.', 'received');
+            break;
+
+        case 57:
+            HoraYPensamiento(20,'8:49pm - Extraño tu risa.', 'received');
+            break;
+
+        case 58:
+            HoraYPensamiento(20,'8:52pm - Seguiré con la página.', 'received');
+            break;
+
+        case 59:
+            HoraYPensamiento(20,'8:57pm - Cómo me mata tu ausencia.', 'received');
+            break;
+
+        case 60:
+            HoraYPensamiento(22,'10:38pm - Escribir me ha relajado mucho, me devolvió un poco de valor y seguridad, sé que es momentáneo pero la aprovecharé. He decidido que hasta el viernes en la noche será cuando te envíe este mensaje y por lo pronto no te estaré escribiendo nada debido a que de verdad mi corazón ya no me dá más para fingir que estoy bien, procuraré expresar todo en este mensaje y tratar de que el proyecto esté listo para ese día. Espero que me envíes otro mensaje para hacertelo saber y si realmente aún me quieres, no preocuparte por mi ausencia. Te quiero y te extraño mucho. Besillos en ya sabe donde ♥.', 'received');
+            break;
+
+        case 61:
+            HoraYPensamiento(23,'11:34pm - Seguiré mañana, quisiera seguir por más tiempo pero ya no me puedo desvelar como antes jaja. Hoy trataré de dormir tranquilo y sin preocupaciones.', 'received');
+            break;
+
+        case 62:
+            HoraYPensamiento(23,'11:46pm - Sonó La Vie En Rose [https://youtu.be/Egyg8wN6NH0?si=ovUvN3LexhBYqtWL] y me provocó el mismo sentimiento que la primera vez que te la mostré ♥.', 'received');
+            break;
+
+        case 63:
+            changeColorTheme(8);
+            addMessageBubble('Miércoles, 19', 'sent');
+            break;
+
+        case 64:
+            HoraYPensamiento(8,'8:24am - Me levanté aproximadamente a las 7 hoy, nuevamente revisé el celular, realmente esperaba un mensaje tuyo, incluso en lo más simple para notificarte sobre mi desición pero creo que esperaré. Temo que no me envíes ni uno solo ya, eso me daría a entender que definitivamente maté tu interés en mí. También es muy temprano como para escribir esto y puede que envies uno más tarde, no quito esto porque hacerlo sería ocultar mis sentimientos y eso no es el objetivo de esta bitácora. Quisiera saber qué es lo que piensas para poder ayudarte y entenderte. Las ganas de desearte un buenos días me mata, pero quiero que seas tú esta vez quien me regale un mensaje primero. Te quiero mucho.', 'received');
+            break;
+
+        case 65:
+            HoraYPensamiento(8,'Te quiero mucho.', 'received');
+            break;
+
+        case 66:
+            HoraYPensamiento(10,'10:32am - Gracias ♥.', 'received');
+            break;
+
+        case 67:
+            HoraYPensamiento(11,'11:52am - Finalmente te pude notificar sobre mi decisión, espero que lo entiendas. Solo deseo que no te preocupes hasta ese día y estés tranquila.', 'received');
+            break;
+
+        case 68:
+            HoraYPensamiento(13,'1:17pm - Suena Hey [https://www.youtube.com/watch?v=ioUdxh9XyeI], me llegó al alma esas palabras, espero que estés bien cariño.', 'received');
+            break;
+
+        case 69:
+            HoraYPensamiento(17,'5:20pm - Extraño tus mensajes tan llenos de pasión.', 'received');
+            break;
+
+        case 70:
+            HoraYPensamiento(17,'5:30pm - Luché por un momento con mi mente sobre una desición, ésta vez gané jaja. Ésta decisión y meta es una de la más difíciles a nivel personal y en la cual requeriré de mucha ayuda si la quiero cumplir, para cumplirla requeriré constancia, disciplina, confianza, optimismo, realismo, apoyo y sobretodo, comprensión. Si no te molesta, quiero que seas parte de esa ayuda, mientras estés cerca ya sea de forma fisica o emocionalmente independientemente de si me ayudas mucho o poco, yo te ofreceré  mi apoyo total e incondicional con lo que necesites, siempre y cuando me dejes saber de manera clara cuales son tus necesidades y preocupaciones.', 'received');
+            break;
+
+        case 71:
+            HoraYPensamiento(17,'Yo en lo personal siempre he tenido miedo de decir mis metas a otras personas porque en algún lado he escuchado y visto que decirlas te induce como a no cumplirlas, por alguna razón te la estoy mencionando. Te daré esa confianza, no quiero que me veas perder, así que me esforzaré más allá de mis capacidades.', 'received');
+            break;
+
+        case 72:
+            HoraYPensamiento(18,'6:54pm - Has subido un estado y no sé que será, me mata la curiosidad jaja. No lo quiero ver porque temo que sea algo relacionado a lo que estoy escribiendo y pienses que escribí eso por verlo, suena estúpido pero pues así soy yo y mi mente jaja. En verdad espero que estés bien pequeñita, ya sea en cualquier aspecto, con tu familia, contigo misma... con nosotros, aunque de este último dudo y más con lo que te dije, yo también estaría preocupado... Por favor esperame mi vida, todavía me falta terminar de expresarme lo más que pueda en este mensaje.', 'received');
+            break;
+
+        case 73:
+            HoraYPensamiento(20,'8:56pm - Cómo habrá sido tu día?, aburrido tal vez es lo que me dirías, yo te contestaría que trataras de hacer algo aparte pero sé que no lo harías jaja. Tambien te preguntaría cómo sigue tu mamá?, espero que muy bien, cuidala mucho, recuerdo cuando una vez me mencionaste que te peleaste con ella, y yo te dije que no hicieras eso, que te reconciliaras con ella en cuando pudieras. Poco despues surgió esa mala noticia y pasaste unas malas semanas, realmente sentí tu tristeza y desesperación, me alegra mucho que te haya podido sacar una sonrisita en medio de todo eso. "Aprecia mucho las cosas que tienes, nunca sabes cuando será la última vez que lo tengas" Ahora yo estoy viviento ese arrepentimiento con tu ausencia. Porfavor jamás te sientas sola, hay muchas personas a las que les importas, cuidalas mucho. Yo deseo que jamás en tu vida o alguien cercano a tí experimente bajo ninguna circunstancia la sensación de sentirse solo y abandonado cuando más lo necesitas, es una experiencia que si no la sobrellevas bien puedes causar tu última mala decisión.', 'received');
+            break;
+
+        case 74:
+            HoraYPensamiento(22,'10:41pm - Qué bonitos recuerdos me trae escribir esto, me parte tanto el corazón haber sido así contigo, me pregunto como serían las cosas si estuviera bien mentalmente, tristemente eso es solo algo que se solo se quedará en el hubiera.', 'received');
+            break;
+
+        case 75:
+            changeColorTheme(1);
+            addMessageBubble('Jueves, 20', 'sent');
+            break;
+
+        case 76:
+            HoraYPensamiento(1,'12:43am - Esta vez si he podido escribir mucho jaja, pero ya me ganó el sueño. No te lo puedo decir por mi promesa, pero, descansa, te quiero.', 'received');
+            break;
+
+        case 77:
+            HoraYPensamiento(6,'6:43am - Buenos días mi vida, espero que todo esté bien y si no, pronto lo estará, no te preocupes. Es mi mensaje de hoy. Junto con un bonito reel, cada vez me cuesta encontrar uno bonito, todos son de desamor. Ya no encuentro como en el principio que abundaban.', 'received');
+            break;
+
+        case 78:
+            HoraYPensamiento(13,'1:31pm - Puedo ver un ramo de flores en tu estado, me pregunto de quien será?, solo se me viene a la mente cosas que no debería, pero al final de cuenta tú querías mis celos jaja... Creo que estos son enfermisos, me pregunto si en realidad querrías estar con una persona así?. De cualquier forma esperaré a tu respuesta. Yo aceptaré tu decisión, porfavor piensalo muy bien, solo me interesa lo que creas adecuado para tí.', 'received');
+            break;
+
+        case 79:
+            HoraYPensamiento(13,'Hablando de celos, cuales serán los que según tú yo te hice?, siempre se me quedó la duda en cuando me lo dijiste jaja, por más que analicé no doy con ni una pista, según yo no he hecho nada malo o al menos no con esa intensión.', 'received');
+            break;
+
+        case 80:
+            HoraYPensamiento(13,'1:57pm - Extraño esos momentos tan agradables que me hacias sentir con tus mensajes, realmente un mensaje tuyo me hacía sentirte cerca de mí, justo cómo tú alguna vez me lo dijiste. Lamento no haberme dado cuenta de eso, cada vez te entiendo más.', 'received');
+            break;
+
+        case 81:
+            HoraYPensamiento(14,'2:01pm - Jamás me sentí merecedor de todo ese amor que me dabas, pero aún así te agradezco de corazón haberme mostrado todo ese cariño. Por más que intenté estos días, no pude llenar este vació que me dejó tu ausencia. Es increible como te sigo pensando tanto aún cuando se supone estoy tratando de distraerme. Solo te puedo decir que mi corazón ya no podía seguir finjiendote que estaba bien, era un dolor que me quebraba el alma.', 'received');
+            break;
+
+        case 82:
+            HoraYPensamiento(15,'3:23pm - Parece que se me presenta una oportunidad, esta vez no he dudado en tomarla.', 'received');
+            break;
+
+        case 83:
+            changeColorTheme(1);
+            addMessageBubble('Viernes, 21', 'sent');
+            break;
+
+        case 84:
+            HoraYPensamiento(1,'12:43am - Qué madre iba a escribir?, ya se me olvidó jaja.', 'received');
+            break;
+
+        case 85:
+            HoraYPensamiento(1,'12:48am - Me alegró haberte visto un rato, tal vez no fue el mejor momento para visitarte, espero que pueda verte sin preocupaciones otra vez. Extrañé tanto esos ojitos con ojeras, esos cachetitos y esa narisita, no te lo dije pero estábas tan linda cómo la última vez que te ví. Aún que no pude escuchar esa risita tuya. Tal vez no hicimos lo que habiamos quedado en hacer al vernos pero entiendo la situación en la que estabas y yo tampoco estaba muy bien mentalmente.', 'received');
+            break;
+
+        case 86:
+            HoraYPensamiento(1,'También me gustaría saber sobre aquello que me dijiste del psicólogo, será grave?, hay algo en que pueda ayudarte?, bueno, será hasta que me quieras contar más al respecto.', 'received');
+            break;
+
+        case 87:
+            HoraYPensamiento(1,'1:03am - Me pregunto si realmente te gustaría leer esto?, es muy largo así que... Bueno, de todas formas me sirve para desahogarme jaja.', 'received');
+            break;
+
+        case 88:
+            HoraYPensamiento(12,'12:45pm - Estaba pensando y espero que no llueva tanto en la noche, o no podré grabar bien el mensaje. Ando pensando en grabarlo orita en la tarde y reenviartelo, pero no es la idea, aparte me dá pena que mi mamá me escuche jaja. Bueno, tengo que apresurarme a escribir que todavía no está listo.', 'received');
+            break;
+
+        case 89:
+            HoraYPensamiento(13,'1:21pm - Qué estarás haciendo cosita?, te la estarás pasando bien?, estarás aburrida seguramente, pongase a estudiar jaja. Le voy a decir al profe Armando que te meta en proyectos pa que te acostumbres.', 'received');
+            break;
+
+        case 90:
+            HoraYPensamiento(21,'9:06pm - Heart to heart, simplemente adecuada para este tipo de momentos.', 'received');
+            break;
+
+        case 91:
+            addMessageBubble('FIN', 'sent');
+            break;
+
+        default:
+            break;
+    }
+    
+    ContadorBitacora++;
+
+}
+
+// cambiarEstadoBitacora();
