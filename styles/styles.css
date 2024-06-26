@@ -1,20 +1,26 @@
 /*********************
 **  Mensaje_DMCPTD  **
 *********************/
-
-:root {
-    --rojo1: #430b07;
-    --rojo2: #9a2012;
-    --rojo3: #fda674;
-    --rojo4: #ffe7d5;
-}
-
 body{
     background-color: lightslategray;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+p{
+    background-color: var(--rojo3);
+    border-radius: 0.5em;
+    padding: 0.2em;
+    
+}
+
+:root {
+    --rojo1: #430b07;
+    --rojo2: #9a2012;
+    --rojo3: #fda674;
+    --rojo4: #ffe7d5;
 }
 
 #portadaP{
@@ -97,6 +103,19 @@ body{
     /* padding: 0.75em; */
 }
 
+.mensaje_frame_title{
+    background-color: var(--rojo1);
+    width: 100%;
+    max-height: 5em;
+    text-align: center;
+    border-radius: 100em;
+}
+
+
+
+/* **************
+**  Bitácora **
+************** */
 #bitacora_frame{
     width: 80%;
     background-color: white;
@@ -106,9 +125,18 @@ body{
     flex-direction: column;
 }
 
-/* **************
-**  ChatBox **
-************** */
+#bitacora_notas{
+    width: 80%;
+}
+
+.bitacora_frame_title{
+    background-color: var(--rojo1);
+    width: 100%;
+    max-height: 5em;
+    text-align: center;
+    border-radius: 100em;
+}
+
 .chat-container {
     display: flex;
     flex-direction: column;
@@ -271,7 +299,7 @@ body{
 }
 
 .chat-footer {
-    background-color: var(--footer-bg-color);
+    background-color: var(--header-bg-color);
 }
 
 .message.sent {

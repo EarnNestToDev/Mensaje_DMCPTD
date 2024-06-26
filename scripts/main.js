@@ -34,6 +34,7 @@ function AnteriorEM(){
 
 function cambiarEstadoMensaje(n){
     switch (n) {
+        //#Saludo
         case 0:
             msg_title.innerHTML = "<h3>Saludo 👋</h3>";
             msg_text.innerHTML = "<p>Hola Dani, cómo estás?, espero que estés bien, que tu familia goce de salud, paz y tranquilidad. Este mensaje posiblemente te lo envíe aproximádamente a las 9:30 o mucho más tarde, no lo sé. Solo espero que lo escuches cuando estés tranquila y sin preocupaciones. Será un poquito largo, así que acomodate bien jaja. Antes de iniciar quiero que quede claro que este escrito, carta, mensaje o cómo tú lo quieras interpretar fue realizado por los más profundos sentimientos de mi corazón, en este instante, yo solo soy el que dá la voz.</p>";
@@ -48,6 +49,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>Si nos llegamos a ver esta semana creo que sí te mostraré este mensaje porque esto te lo quería decir desde el viernes que fué que noté ciertos cambios, solo que no estará tan pulido a como será hasta el viernes. Te lo vuelvo a repetir en caso de que se te haya olvidado, pero pues yo me expreso mejor escribiendo, y si lo hiciera directamente desde una grabación en tiempo real me saltaría muchas cosas o haría que el audio dure demasiado y se vuelva un revoltijo perdiendo toda la importancia jaja, espero que me entiendas.</p>";
             break;
 
+            //#Feliz primer mes de novios
         case 3:
             msg_title.innerHTML = "<h3>Feliz primer mes de novios 💕</h3>";
             msg_text.innerHTML = "<p>Primero que nada, feliz primer mes de novios hoy hace un mes ambos decidimos formalizar la relación, estuve pensando mucho tiempo este día, especialmente porque todavía recuerdo cuando casi olvido cuando cumplimos una semana, sé que es un poco exagerado celebrar por una semana pero he escuchado que a las mujeres les encanta ese tipo de detalles, igual lo ví con Adrían y Abril, así que dije por qué no lo hago yo también, supongo que lo arruiné ese día jaja. Esta vez será diferente.</p>";
@@ -138,6 +140,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>Soy consciente de que muchas cosas que te he dicho hasta ahora ya te lo he dicho con anteriordad por mensaje, pero mientras yo recuerde todos esos detalles te agredeceré y te pediré perdón las veces que sea necesario según sea la situación.</p>";
             break;
 
+            //#Por qué no he ido a verte?
         case 25:
             msg_title.innerHTML = "<h3>Por qué no he ido a verte? 😓</h3>";
             msg_text.innerHTML = "<p>Este punto, no sé como te lo puedo explicar, es un problema que me suele pasar en distintas situaciones frecuentemente y por lo visto aquí también, es sobre el porque no te he ido a visitar.</p>";
@@ -184,9 +187,11 @@ function cambiarEstadoMensaje(n){
             break;
 
         case 36:
+            msg_title.innerHTML = "<h3>Por qué no he ido a verte? 😓</h3>";
             msg_text.innerHTML = "<p>Solo el viernes 14 que fue que me dijiste que fuiste a trabajar, ese día me emocioné mucho pero no quise preguntartelo tan directamente porque no sabia si estaba tu mamá, como contestaste un poquito tarde supuse que estabas muy ocupada, y te digo que no quise ir por miedo a que estuviera alguien ahí contigo, y tampoco sabía donde era. Al final en la noche me dijiste ella se quedó en tu casa jaja, como me arrepiento de no haberme arriesgado a ir.</p>";
             break;
 
+            //#Te he notado distante
         case 37:
             msg_title.innerHTML = "<h3>Te he notado distante</h3>";
             msg_text.innerHTML = "<p>Por otro lado ésta última semana he notado que estás bastante distante de mí, en específico desde el viernes 14, lo puedo notar en tu forma de contestar los mensajes, en que ya no me envias videos como antes, ya no subes nada en facebook, me respondes demasiado tarde, al principio creía que sería algún problema personal y esperaba a qué me dijeras para tal vez ayudarte, pero en tanto pensar y analizar llegué a la conclusión de que lo más posible es por algo que yo hice, se me vienen tantas cosas a mi mente que la única forma de salir de dudas es que tú me digas.</p>";
@@ -205,6 +210,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>A veces me pregunto qué es lo que realmente viste en mí para soportarme hasta ahora, he cambiado?, he empeorado?, he hecho las cosas mal?, te he fallado?.</p>";
             break;
 
+            //#Me quieres?
         case 41:
             msg_title.innerHTML = "<h3>Me quieres ❔</h3>";
             msg_text.innerHTML = "<p>Todo eso me cuestiona muchas cosas sobre mí. En referencia a cuando me preguntaste de cierta forma seria, tú realmente me quieres? y si lo haces, me quieres menos que antes?, cuál es la razón de ello?.</p>";
@@ -255,6 +261,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>Jamás te mencioné nada al respecto porque siempre sentía que me lo cubrirías con alguna mentira, tanto me dolió ese gesto que yo prácticamente no iba a aceptar ni una respuesta.</p>";
             break;
 
+            //#Alguna otra persona te hace feliz?
         case 52:
             msg_title.innerHTML = "<h3>Alguna otra persona te hace más feliz ❔</h3>";
             msg_text.innerHTML = "<p>En mis miedos e inseguridades constantes, yo me pregunto si hay más personas que te llamen la atención?, creo suponer que sí, pero te cortas oportunidades por mí. 'Conóceme bien, No te cegues por el amor y piensalo bien, Si conoces a alguien que te haga sentir mejor y ambos están interesados, ve a por él', son palabras que yo te dije al inició de lo nuestro, lo recuerdas?</p>";
@@ -269,6 +276,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>No me arrepiento para nada sinceramente, realmente me ha encantado volver a sentir un poco de cariño de otra persona nuevamente, he aprendido tanto de tí como de mí. Entre ellas a ver el verdadero estado sentimental en el que estoy, a bajar mi orgullo, a ser más comprensivo, a ser más empático, a ser más recíprocro, a ser más valiente. Son cosas en las qué según yo iba a trabajar más adelante, pero me doy cuenta que las necesito trabajar desde ahora.</p>";
             break;
 
+            //#Te quiero ver feliz, aunque no sea conmigo
         case 55:
             msg_title.innerHTML = "<h3>Te quiero ver feliz, aunque no sea conmigo</h3>";
             msg_text.innerHTML = "<p>Te quiero mucho Dani, te quiero tanto que quiero verte feliz, incluso si no es a mi lado. Quiero que realmente te sientas feliz y plena contigo misma si no lo estás, que reboses tanto de verdadera felicidad que cualquier persona que esté a tu lado se sienta agusto con tu presencia, con tu personalidad.</p>";
@@ -279,6 +287,7 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>Cumple tus sueños y metas aunque los demás no crean en tí, vaya, aunque incluso la persona más cercana a tí dude de tus capacidades, demuestra que eres una inspiración para los demás. Es un camino difícl y largo, porque si fuera facíl la vida misma sería aburrida. Llora cuando tengas que llorar, enfadate cuando te tengas que enfadar, deja cuando tengas que dejar pero sobre todo, aprende, porque incluso de lo más malo se puede aprender.</p>";
             break;
 
+            //#Lo que hago en todo el día
         case 57:
             msg_title.innerHTML = "<h3>Lo que hago en todo el día</h3>";
             msg_text.innerHTML = "<p>Ahora, por qué tantas inseguridades y por qué sobrepensar hasta las cosas más simples dices tú?.</p>";
@@ -309,11 +318,13 @@ function cambiarEstadoMensaje(n){
             msg_text.innerHTML = "<p>Te recomiendo que disfrutes mucho esta etapa de tu vida, la universidad es una etapa maravillosa, estresante pero que al final será el comienzo de tu propia historia. Recalco, nada es fácil. Todo requiere de un máximo esfuerzo, al final de todo somos humanos, eso es lo bello de la vida, disfrutar de cruzar los obstáculos, no llegar al final porque sí.</p>";
             break;
 
+            //#La salida está abierta
         case 64:
             msg_title.innerHTML = "<h3>La salida siempre está abierta</h3>";
-            msg_text.innerHTML = "<p>(Sin preocupaciones | Me llevaré los buenos recuerdos y las buenas prácticas, respetaré tu decisión | Adrian | Lamento no haber sido lo que tú esperabas)</p>";
+            msg_text.innerHTML = "<p>(Sin preocupaciones | Me llevaré los buenos recuerdos y las buenas prácticas, no solías ser muy abierta conmigo, respetaré tu decisión | Adrian | Lamento no haber sido lo que tú esperabas)</p>";
             break;
 
+            //#Tu respuesta
         case 65:
             msg_title.innerHTML = "<h3>Finalmente, esperaré tu respuesta</h3>";
             msg_text.innerHTML = "<p>soy una persona de corazón débil así que lo único que espero es tu sinceridad pura como ser humano | Espero que esto te pueda aclarar tus dudas, y si hay más dudas que quieras aclararlas a pesar de tu decisión final, con gusto te las aclararé | En buenos términos | Espero no arruinarte tu fin de semana</p>";
@@ -467,7 +478,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 17:
-            HoraYPensamiento(22,'10:29pm, Decidí enviarte un reel, y un te amo, sé que suena simple, pero realmente te amo... te amo más de lo que puedes imaginar pequeña.', 'received');
+            HoraYPensamiento(22,'10:29pm - Decidí enviarte un reel, y un te amo, sé que suena simple, pero realmente te amo... te amo más de lo que puedes imaginar pequeña.', 'received');
             break;
 
         case 18:
@@ -658,7 +669,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 64:
-            HoraYPensamiento(8,'8:24am - Me levanté aproximadamente a las 7 hoy, nuevamente revisé el celular, realmente esperaba un mensaje tuyo, incluso en lo más simple para notificarte sobre mi desición pero creo que esperaré. Temo que no me envíes ni uno solo ya, eso me daría a entender que definitivamente maté tu interés en mí. También es muy temprano como para escribir esto y puede que envies uno más tarde, no quito esto porque hacerlo sería ocultar mis sentimientos y eso no es el objetivo de esta bitácora. Quisiera saber qué es lo que piensas para poder ayudarte y entenderte. Las ganas de desearte un buenos días me mata, pero quiero que seas tú esta vez quien me regale un mensaje primero. Te quiero mucho.', 'received');
+            HoraYPensamiento(8,'8:24am - Me levanté aproximadamente a las 7 hoy, nuevamente revisé el celular, realmente esperaba un mensaje tuyo, incluso en lo más simple para notificarte sobre mi desición pero creo que esperaré. Temo que no me envíes ni uno solo ya, eso me daría a entender que definitivamente maté tu interés en mí. También es muy temprano como para escribir esto y puede que envies uno más tarde, no quito esto porque hacerlo sería ocultar mis sentimientos y eso no es el objetivo de esta bitácora. Quisiera saber qué es lo que piensas para poder ayudarte y entenderte. Las ganas de desearte un buenos días me mata, pero quiero que seas tú esta vez quien me regale un mensaje primero.', 'received');
             break;
 
         case 65:
@@ -771,6 +782,26 @@ function CambiarEstadoBitacora(){
             AgregarBurbujaDeMensaje('FIN', 'sent');
             break;
 
+        case 92:
+            AgregarBurbujaDeMensaje('Martes, 25', 'sent');
+            break;
+
+        case 93:
+            HoraYPensamiento(21,'Sé que no leerás esto pero...', 'received');
+            break;
+
+        case 93:
+            HoraYPensamiento(21,'Cada vez que escucho Sabor a Mí la letra me recuerda mucho a tí', 'received');
+            break;
+
+        case 94:
+            HoraYPensamiento(21,'Olvidé decirtelo en mensaje pero, si tienes algo que decirme, ya sea bueno o malo, no importa lo que sea realmente, ya sabes dónde comunicarte conmigo. Te esperaré hasta que te mejores, me encantaría ayudarte y apoyarte para que no te sientas sola pero parece que lo mejor que puedo hacer por ahora es apartarme.', 'received');
+            break;
+
+        case 95:
+            HoraYPensamiento(21,'TE AMO ♥', 'received');
+            break;
+
         default:
             break;
     }
@@ -780,3 +811,7 @@ function CambiarEstadoBitacora(){
 }
 
 // cambiarEstadoBitacora();
+
+
+//Aún me resuena en mi cabeza esas palabra tuyas qué dijiste también. "No dar cariño para no crear falsas ilusiones".
+//Esos días que fuí a verte, me dí cuenta de que en un momento en el que mi prescencia te solía provocar paz y tranquilidad ahora provoca en tí desilución e incomodidad. Al menos eso fue lo que me dió la impresión en tu cara.
