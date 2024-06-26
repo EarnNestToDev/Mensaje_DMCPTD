@@ -16,6 +16,14 @@
 
     <!-- Mensaje -->
     <section id="mensaje_frame">
+        <article id="mensaje_frame_title">
+            <h2>Mensaje 💌</h2>
+        </article>
+
+        <article id="mensaje_notas">
+            Notas:
+        </article>
+
         <article id="mensaje_title_bar">
 
             <button id="mensaje_anterior" title="Anterior mensaje" onclick = "AnteriorEM()">
@@ -42,19 +50,35 @@
         </article>
     </section>
 
+    
+    <!-- Extras -->
+    <section id="extras">
+        <h2>Extras</h2>
+    </section>
+
+
     <!-- Bitácora -->
     <section id="bitacora_frame">
+
+        <article id="bitacora_frame_title">
+            <h2>Bitácora 💌</h2>
+        </article>
+
+        <article id="bitacora_notas">
+            Notas:
+        </article>
+
         <div class="chat-container" id="chat-container">
             <div class="chat-header" id="chat-header">
                 Ernest's Mind
             </div>
             <div class="chat-body" id="chat-body">
-                <!-- Las burbujas de mensajes se agregarán aquí -->
+                <!-- Aquí van las burbujas de mensajes -->
             </div>
             <div class="chat-footer" id="chat-footer">
                 <!-- <input type="text" id="chat-input" placeholder="Escribe un mensaje..."> -->
                 <!-- <button id="send-button">Enviar</button> -->
-                <button id="send-button" onclick="cambiarEstadoBitacora()">+</button>
+                <button id="send-button" onclick="CambiarEstadoBitacora()">+</button>
             </div>
         </div>
     </section>

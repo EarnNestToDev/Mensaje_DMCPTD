@@ -16,18 +16,19 @@ function test(){
 }
 
 
- //# Mensaje Frame
+ //# ------ Mensaje Frame ------
+
 function SiguienteEM(){
     ContadorMensaje++;
     cambiarEstadoMensaje(ContadorMensaje);
-    console.log(ContadorMensaje);
+    // console.log(ContadorMensaje);
 }
 
 function AnteriorEM(){
     if (ContadorMensaje > 0){
         ContadorMensaje--;
         cambiarEstadoMensaje(ContadorMensaje);
-        console.log(ContadorMensaje);
+        // console.log(ContadorMensaje);
     }
 }
 
@@ -331,7 +332,8 @@ function cambiarEstadoMensaje(n){
 }
 
 
-//# Chatbox
+//# ------ Chatbox ------
+
 // document.getElementById('send-button').addEventListener('click', sendMessage);
 
 // document.getElementById('chat-input').addEventListener('keypress', function(event) {
@@ -350,7 +352,7 @@ function cambiarEstadoMensaje(n){
 //     }
 // }
 
-function addMessageBubble(text, type) {
+function AgregarBurbujaDeMensaje(text, type) {
     const chatBody = document.getElementById('chat-body');
     const messageBubble = document.createElement('div');
     messageBubble.classList.add('message', type);
@@ -359,8 +361,8 @@ function addMessageBubble(text, type) {
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-// Función para cambiar la paleta de colores
-function changeColorTheme(hour) {
+// Cambiar la paleta de colores
+function CambiarTemaDeColor(hour) {
     const chatContainer = document.getElementById('chat-container');
     if (hour >= 6 && hour < 12) {
         // Mañana
@@ -377,27 +379,27 @@ function changeColorTheme(hour) {
     }
 }
 
-// Llamar la función con la hora actual
+// Hora actual
 // const currentHour = new Date().getHours();
 // changeColorTheme(currentHour);
-changeColorTheme(19);
+CambiarTemaDeColor(19);
 
 // Ejemplo de agregar un mensaje recibido
 // addMessageBubble('Domingo, 14', 'sent');
-addMessageBubble('Bienvenida a mi mente jaja.', 'received');
-// addMessageBubble('Escribir esto realmente me está ayudando a no tener esos pensamientos intrusivos, a las 6:51pm recibí tu mensaje de contestación a la imagen que te envié. Como todos los días, estoy esperando a recibir otro mensajito tuyo como solías hacer antes, pero ya me estoy acostumbrado a que no jaja, creo que buscaré otro bonito reel más al rato en facebook y te lo enviaré', 'received');
+AgregarBurbujaDeMensaje('Bienvenida a mi mente jaja.', 'received');
 // changeColorTheme(22);
 
 function HoraYPensamiento(h,p,t){
-    changeColorTheme(h);
-    addMessageBubble(p,t);
+    CambiarTemaDeColor(h);
+    AgregarBurbujaDeMensaje(p,t);
 }
 
-function cambiarEstadoBitacora(){
+// Cambiar contenido de bitácora
+function CambiarEstadoBitacora(){
     switch (ContadorBitacora) {
         case 0:
-            changeColorTheme(19);
-            addMessageBubble('Domingo, 16', 'sent');
+            CambiarTemaDeColor(19);
+            AgregarBurbujaDeMensaje('Domingo, 16', 'sent');
             break;
             
         case 1:
@@ -485,8 +487,8 @@ function cambiarEstadoBitacora(){
             break;
 
         case 22:
-            changeColorTheme(5);
-            addMessageBubble('Lunes, 17', 'sent');
+            CambiarTemaDeColor(5);
+            AgregarBurbujaDeMensaje('Lunes, 17', 'sent');
             break;
 
         case 23:
@@ -558,8 +560,8 @@ function cambiarEstadoBitacora(){
             break;
 
         case 40:
-            changeColorTheme(2);
-            addMessageBubble('Martes, 18', 'sent');
+            CambiarTemaDeColor(2);
+            AgregarBurbujaDeMensaje('Martes, 18', 'sent');
             break;
 
         case 41:
@@ -651,8 +653,8 @@ function cambiarEstadoBitacora(){
             break;
 
         case 63:
-            changeColorTheme(8);
-            addMessageBubble('Miércoles, 19', 'sent');
+            CambiarTemaDeColor(8);
+            AgregarBurbujaDeMensaje('Miércoles, 19', 'sent');
             break;
 
         case 64:
@@ -700,8 +702,8 @@ function cambiarEstadoBitacora(){
             break;
 
         case 75:
-            changeColorTheme(1);
-            addMessageBubble('Jueves, 20', 'sent');
+            CambiarTemaDeColor(1);
+            AgregarBurbujaDeMensaje('Jueves, 20', 'sent');
             break;
 
         case 76:
@@ -733,8 +735,8 @@ function cambiarEstadoBitacora(){
             break;
 
         case 83:
-            changeColorTheme(1);
-            addMessageBubble('Viernes, 21', 'sent');
+            CambiarTemaDeColor(1);
+            AgregarBurbujaDeMensaje('Viernes, 21', 'sent');
             break;
 
         case 84:
@@ -766,7 +768,7 @@ function cambiarEstadoBitacora(){
             break;
 
         case 91:
-            addMessageBubble('FIN', 'sent');
+            AgregarBurbujaDeMensaje('FIN', 'sent');
             break;
 
         default:
