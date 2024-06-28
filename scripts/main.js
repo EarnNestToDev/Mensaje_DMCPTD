@@ -3,10 +3,11 @@ console.log("<< Cargando script... >>");
 
 let ContadorMensaje = 0, ContadorBitacora = 0;
 
-let msg_title, msg_text;
+let msg_title, msg_text, button_mas_bitacora;
 
 msg_title = document.getElementById('mensaje_title');
 msg_text = document.getElementById('mensaje_text');
+button_mas_bitacora = document.getElementById('send-button');
 
 
 
@@ -407,6 +408,7 @@ function HoraYPensamiento(h,p,t){
 
 // Cambiar contenido de bitácora
 function CambiarEstadoBitacora(){
+    button_mas_bitacora.innerHTML = "+";
     switch (ContadorBitacora) {
         case 0:
             CambiarTemaDeColor(19);
@@ -803,6 +805,8 @@ function CambiarEstadoBitacora(){
             break;
 
         default:
+            button_mas_bitacora.innerHTML = "FIN";
+            button_mas_bitacora.style.setProperty('background-color', 'grey');
             break;
     }
     

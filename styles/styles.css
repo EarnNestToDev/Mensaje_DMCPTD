@@ -7,6 +7,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* font-family: serif, Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 p{
@@ -17,9 +20,10 @@ p{
 }
 
 nots{
-    background-color: var(--rojo3);
+    background-color: var(--rojo5);
     border-radius: 1em;
     padding: 0.5em;
+    font-weight: bold;
 }
 
 :root {
@@ -27,6 +31,7 @@ nots{
     --rojo2: #9a2012;
     --rojo3: #fda674;
     --rojo4: #ffe7d5;
+    --rojo5: #fb763c;
 }
 
 #portadaP{
@@ -41,7 +46,7 @@ nots{
 }
 
 #mensaje_frame{
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     width: 80%;
     display: flex;
     justify-content: center;
@@ -67,10 +72,13 @@ nots{
 
 #mensaje_title{
     background-color: var(--rojo2);
+    color: white;
     width: 85%;
     max-height: 5em;
     text-align: center;
     border-radius: 100em;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #mensaje_anterior, #mensaje_siguiente{
@@ -117,6 +125,8 @@ nots{
     text-align: center;
     border-radius: 100em;
     margin-bottom: 1em;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -131,6 +141,8 @@ nots{
     text-align: center;
     border-radius: 100em;
     margin-bottom: 1em;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -139,7 +151,7 @@ nots{
 ************** */
 #bitacora_frame{
     width: 80%;
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -153,11 +165,14 @@ nots{
 
 .bitacora_frame_title, .playlist_frame_title{
     background-color: var(--rojo2);
+    color: white;
     width: 100%;
     max-height: 5em;
     text-align: center;
     border-radius: 100em;
     margin-bottom: 1em;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .chat-container {
@@ -167,7 +182,7 @@ nots{
     width: 90%;
     max-width: 400px;
     height: 80vh;
-    background-color: #ffffff;
+    background-color: #ffffff;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -343,15 +358,26 @@ nots{
 
 
 /* **************
-**  Bitácora **
+**  Playlist **
 ************** */
 #playlist_frame {
     width: 80%;
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+}
+
+.playlist_scrollbar{
+    width: 100%;
+    background-color: var(--rojo3);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1em;
+    margin-top: 1em;
 }
 
 
