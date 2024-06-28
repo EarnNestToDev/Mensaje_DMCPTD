@@ -16,6 +16,12 @@ p{
     
 }
 
+nots{
+    background-color: var(--rojo3);
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
 :root {
     --rojo1: #430b07;
     --rojo2: #9a2012;
@@ -103,14 +109,29 @@ p{
     /* padding: 0.75em; */
 }
 
-.mensaje_frame_title{
+.mensaje_frame_title {
     background-color: var(--rojo1);
+    color: white;
     width: 100%;
     max-height: 5em;
     text-align: center;
     border-radius: 100em;
+    margin-bottom: 1em;
 }
 
+
+/* **************
+**  Extras **
+************** */
+#extras{
+    background-color: var(--rojo1);
+    color: white;
+    width: 80%;
+    max-height: 5em;
+    text-align: center;
+    border-radius: 100em;
+    margin-bottom: 1em;
+}
 
 
 /* **************
@@ -123,18 +144,20 @@ p{
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    margin-bottom: 1em;
 }
 
 #bitacora_notas{
-    width: 80%;
+    width: 100%;
 }
 
-.bitacora_frame_title{
-    background-color: var(--rojo1);
+.bitacora_frame_title, .playlist_frame_title{
+    background-color: var(--rojo2);
     width: 100%;
     max-height: 5em;
     text-align: center;
     border-radius: 100em;
+    margin-bottom: 1em;
 }
 
 .chat-container {
@@ -249,7 +272,7 @@ p{
     --sent-message-bg-color: #ffd700;
     --received-message-bg-color: #fafad2; */
 
-    --bg-color: #fff441;
+    --bg-color: #f2cf00;
     --header-bg-color: #89580a;
     --footer-bg-color: #fff441;
     --sent-message-bg-color: #a67102;
@@ -281,8 +304,8 @@ p{
     --sent-message-bg-color: #34495e;
     --received-message-bg-color: #3e4e59; */
 
-    --bg-color: #416b88;
-    --header-bg-color: #36566e;
+    --bg-color: #36566e;
+    --header-bg-color: #426b87;
     --footer-bg-color: #416b88;
     --sent-message-bg-color: #5484a3;
     --received-message-bg-color: #cfdde8;
@@ -316,6 +339,19 @@ p{
 
 .chat-footer button:hover {
     background-color: var(--button-pressed-color);
+}
+
+
+/* **************
+**  Bitácora **
+************** */
+#playlist_frame {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
 }
 
 

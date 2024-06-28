@@ -811,7 +811,3 @@ function CambiarEstadoBitacora(){
 }
 
 // cambiarEstadoBitacora();
-
-
-//Aún me resuena en mi cabeza esas palabra tuyas qué dijiste también. "No dar cariño para no crear falsas ilusiones".
-//Esos días que fuí a verte, me dí cuenta de que en un momento en el que mi prescencia te solía provocar paz y tranquilidad ahora provoca en tí desilución e incomodidad. Al menos eso fue lo que me dió la impresión en tu cara.
