@@ -3,18 +3,32 @@ console.log("<< Cargando script... >>");
 
 let ContadorMensaje = 0, ContadorBitacora = 0;
 
-let msg_title, msg_text, button_mas_bitacora;
+let title_portada, msg_title, msg_text, button_mas_bitacora;
 
 msg_title = document.getElementById('mensaje_title');
 msg_text = document.getElementById('mensaje_text');
 button_mas_bitacora = document.getElementById('send-button');
+title_portada = document.getElementById('portadaP');
 
 
+CambiarTemaDeColor(19);
+CambiarTitulo();
 
 
 function test(){
     msg_text.innerHTML = "Hola 💌";
 }
+ //# ------ Título Radom ------
+    function CambiarTitulo(){
+        let RNT = Math.random()*3;
+        if(RNT >= 2){
+            title_portada.innerHTML = "Una parte de mí 💖 para tí Dani ✨";
+        }
+        console.log(RNT);
+        
+    }
+ // ----------------------------
+
 
 
  //# ------ Mensaje Frame ------
@@ -342,9 +356,11 @@ function cambiarEstadoMensaje(n){
     }
     
 }
+// ----------------------------
 
 
-//# ------ Chatbox ------
+
+//# ------ Bitácora ------
 
 // document.getElementById('send-button').addEventListener('click', sendMessage);
 
@@ -394,7 +410,6 @@ function CambiarTemaDeColor(hour) {
 // Hora actual
 // const currentHour = new Date().getHours();
 // changeColorTheme(currentHour);
-CambiarTemaDeColor(19);
 
 // Ejemplo de agregar un mensaje recibido
 // addMessageBubble('Domingo, 14', 'sent');
@@ -813,5 +828,6 @@ function CambiarEstadoBitacora(){
     ContadorBitacora++;
 
 }
-
 // cambiarEstadoBitacora();
+
+// ----------------------------

@@ -26,6 +26,8 @@ nots{
     font-weight: bold;
 }
 
+
+
 :root {
     --rojo1: #430b07;
     --rojo2: #9a2012;
@@ -163,7 +165,7 @@ nots{
     width: 100%;
 }
 
-.bitacora_frame_title, .playlist_frame_title{
+.bitacora_frame_title, .playlist_frame_title, .consejos_frame_title{
     background-color: var(--rojo2);
     color: white;
     width: 100%;
@@ -360,13 +362,14 @@ nots{
 /* **************
 **  Playlist **
 ************** */
-#playlist_frame {
+#playlist_frame, #consejos_frame {
     width: 80%;
     /* background-color: white; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    margin-bottom: 1em;
 }
 
 .playlist_scrollbar{
@@ -389,4 +392,40 @@ nots{
     background-color: var(--rojo3);
     transform: translateY(4px);
     box-shadow: 0 2px #666;
+}
+
+
+.chat-header span{
+    position: relative;
+    animation: aparecertexto 24s infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+.chat-header span::before{
+    /* content: attr(data-text); */
+    position: absolute;
+    /* position: relative; */
+    width: 100%;
+    /* border-right: 4px solid white; */
+    /* overflow: hidden; */
+    /* animation: animate 4s linear infinite; */
+}
+
+@keyframes aparecertexto {
+    0%{
+        display: inline-block;
+    }
+    /* 33.33%, 100%{ */
+    16.66%, 100%{
+        display: none;
+    }
+}
+
+@keyframes animate {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
 }
