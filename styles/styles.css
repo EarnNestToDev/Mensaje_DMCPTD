@@ -1,7 +1,7 @@
 /*********************
 **  Mensaje_DMCPTD  **
 *********************/
-body{
+body {
     background-color: lightslategray;
     display: flex;
     justify-content: center;
@@ -12,14 +12,14 @@ body{
     /* font-family: serif, Tahoma, Geneva, Verdana, sans-serif; */
 }
 
-p{
+.mensaje_text p, .bitacora_notas p, .playlist_notas p {
     background-color: var(--rojo3);
     border-radius: 0.5em;
     padding: 0.2em;
     
 }
 
-nots{
+nots {
     background-color: var(--rojo5);
     border-radius: 1em;
     padding: 0.5em;
@@ -36,7 +36,7 @@ nots{
     --rojo5: #fb763c;
 }
 
-#portadaP{
+#portadaP {
     background-color: aliceblue;
     width: 80%;
     height: 100vh;
@@ -47,7 +47,7 @@ nots{
     margin-bottom: 5em;
 }
 
-#mensaje_frame{
+#mensaje_frame {
     /* background-color: aliceblue; */
     width: 80%;
     display: flex;
@@ -57,7 +57,7 @@ nots{
     margin-bottom: 5em;
 }
 
-#mensaje_title_bar{
+#mensaje_title_bar {
     /* background-color: var(--rojo2); */
     width: 100%;
     /* text-align: center; */
@@ -72,7 +72,7 @@ nots{
     /* padding: 0.75em; */
 }
 
-#mensaje_title{
+#mensaje_title {
     background-color: var(--rojo2);
     color: white;
     width: 85%;
@@ -83,7 +83,7 @@ nots{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#mensaje_anterior, #mensaje_siguiente{
+#mensaje_anterior, #mensaje_siguiente {
     background-color: var(--rojo2);
     width: 5em;
     height: 5em;
@@ -94,7 +94,7 @@ nots{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#mensaje_text_border{
+#mensaje_text_border {
     background-color: var(--rojo3);
     /* text-align: justify; */
     display: flex;
@@ -108,7 +108,7 @@ nots{
     /* padding: 0.75em; */
 }
 
-#mensaje_text{
+#mensaje_text {
     /* background-color: var(--rojo4); */
     text-align: justify;
 
@@ -135,7 +135,7 @@ nots{
 /* **************
 **  Extras **
 ************** */
-#extras{
+#extras {
     background-color: var(--rojo1);
     color: white;
     width: 80%;
@@ -151,7 +151,7 @@ nots{
 /* **************
 **  Bitácora **
 ************** */
-#bitacora_frame{
+#bitacora_frame {
     width: 80%;
     /* background-color: white; */
     display: flex;
@@ -161,11 +161,11 @@ nots{
     margin-bottom: 1em;
 }
 
-#bitacora_notas{
+#bitacora_notas {
     width: 100%;
 }
 
-.bitacora_frame_title, .playlist_frame_title, .consejos_frame_title{
+.bitacora_frame_title, .playlist_frame_title, .consejos_frame_title {
     background-color: var(--rojo2);
     color: white;
     width: 100%;
@@ -372,7 +372,7 @@ nots{
     margin-bottom: 1em;
 }
 
-.playlist_scrollbar{
+.playlist_scrollbar {
     width: 100%;
     background-color: var(--rojo3);
     display: flex;
@@ -381,6 +381,45 @@ nots{
     flex-direction: column;
     border-radius: 1em;
     margin-top: 1em;
+}
+
+
+/* **************
+**  Consejos **
+************** */
+/* .consejos_frame {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+} */
+
+.consejo_text {
+    text-align: start;
+
+}
+
+.consejo_text {
+    background-color: var(--rojo3);
+    margin-bottom: 0.3em;
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+.consejo_autor_text {
+    background-color: var(--rojo3);
+    border-radius: 0.5em;
+    padding: 0.1em;
+
+}
+
+.consejos_frame button {
+    background-color: var(--rojo1);
+    margin-top: 0.5em;
+    width: 5em;
+    height: 2em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -395,13 +434,13 @@ nots{
 }
 
 
-.chat-header span{
+.chat-header span {
     position: relative;
     animation: aparecertexto 24s infinite;
     animation-delay: calc(-4s * var(--i));
 }
 
-.chat-header span::before{
+.chat-header span::before {
     /* content: attr(data-text); */
     position: absolute;
     /* position: relative; */

@@ -3,31 +3,128 @@ console.log("<< Cargando script... >>");
 
 let ContadorMensaje = 0, ContadorBitacora = 0;
 
-let title_portada, msg_title, msg_text, button_mas_bitacora;
+let title_portada, msg_title, msg_text, button_mas_bitacora, consejo_text, consejo_a_text;
 
 msg_title = document.getElementById('mensaje_title');
 msg_text = document.getElementById('mensaje_text');
 button_mas_bitacora = document.getElementById('send-button');
 title_portada = document.getElementById('portadaP');
+consejo_text = document.getElementById('consejo_text');
+consejo_a_text = document.getElementById('consejo_autor_text');
 
 
 CambiarTemaDeColor(19);
 CambiarTitulo();
+CambiarConsejo();
 
 
 function test(){
     msg_text.innerHTML = "Hola 💌";
 }
- //# ------ Título Radom ------
+ //# ------ Título Random ------
     function CambiarTitulo(){
-        let RNT = Math.random()*3;
-        if(RNT >= 2){
+        let RNT =  Math.floor(Math.random()*3);
+        if(RNT == 2){
             title_portada.innerHTML = "Una parte de mí 💖 para tí Dani ✨";
         }
-        console.log(RNT);
+        // console.log(RNT);
         
     }
  // ----------------------------
+
+
+
+ //# ------ Consejo Random ------
+ function CambiarConsejo(){
+    let RCT =  Math.floor(Math.random()*15);
+
+
+    switch (RCT) {
+        case 0:
+            consejo_text.innerHTML = '"Expresar emociones negativas no siempre es malo, en realidad puede ayudarnos a comprender mejor a los demás, a empatizar con ellos y a fortalecer nuestras relaciones."';
+            consejo_a_text.innerHTML = "- Farid Dieck";
+            break;
+
+        case 1:
+            consejo_text.innerHTML = '"Aunque la noche parezca interminable, un día llegará la mañana."';
+            consejo_a_text.innerHTML = "- Farid Dieck";
+            break;
+
+        case 2:
+            consejo_text.innerHTML = '"Reconoce tus errores, modifica tus defectos y perfecciona tus virtudes, encargate de mejorar lo bueno y erradicar lo malo que habita en tí."';
+            consejo_a_text.innerHTML = "- Hombres Tradicionales";
+            break;
+
+        case 3:
+            consejo_text.innerHTML = '"El hombre solo es verdaderamente libre cuando no tiene miedo de su propia sombra."';
+            consejo_a_text.innerHTML = "- Dostoievski";
+            break;
+
+        case 4:
+            consejo_text.innerHTML = '"Amarse a uno mismo es sufrir el proceso mediante el cual enfrentamos nuestra propia oscuridad, es reconocer tanto virtudes como defectos, es tomar las desiciones que duelen en el momento pero que son fructiferas a largo plazo. Amarse es tener el coraje de hacer lo que debemos hacer por nuestro propio bien."';
+            consejo_a_text.innerHTML = "- Hombres Tradicionales";
+            break;
+
+        case 5:
+            consejo_text.innerHTML = '"No sea excesivo, lanzate a la vida sin deliveraciones, no tengas miedo, la inundación te llevará y te pondrá de nuevo en pie."';
+            consejo_a_text.innerHTML = "- Dostoievski";
+            break;
+
+        case 6:
+            consejo_text.innerHTML = '"El que vive enamorado queda ilusionado, el que vive ilusionado muere en la realidad y el que vive en la realidad anhela vivir en la ilusión."';
+            consejo_a_text.innerHTML = "- Nava";
+            break;
+
+        case 7:
+            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, cuando éntres te sentirás en un verdadero aprieto pero cuando salgas sentirás conseguirás el verdadero alivio."';
+            consejo_a_text.innerHTML = "- EDLCC";
+            break;
+
+        case 8:
+            consejo_text.innerHTML = '"Y la mujer detrás de la maleza le sonreirá al hombre por 10 segundos para que su corazón sonria por 10 años."';
+            consejo_a_text.innerHTML = "- Corintios 12:32";
+            break;
+
+        case 9:
+            consejo_text.innerHTML = '"El amor es más que felicidad, líbido y muestras afectivas, implica confianza, respeto, apoyo y empatía."';
+            consejo_a_text.innerHTML = "- No me preguntes Solo Gózalo!";
+            break;
+
+        case 10:
+            consejo_text.innerHTML = '"La probabilidad nunca es 0, a no ser que esté programada."';
+            consejo_a_text.innerHTML = "- EDLCC";
+            break;
+
+        case 11:
+            consejo_text.innerHTML = '"Si te sientes triste y vas a terapia, en hora buena!, estás luchando por sentirte mejor."';
+            consejo_a_text.innerHTML = "- Ezquizofrenia Natural";
+            break;
+
+        case 12:
+            consejo_text.innerHTML = '"Mucho de algo no es bueno."';
+            consejo_a_text.innerHTML = "- Gilberto S";
+            break;
+
+        case 13:
+            consejo_text.innerHTML = '"Un pasatiempo que no suscite curiosidad y emoción no te dejará satisfecho."';
+            consejo_a_text.innerHTML = "- Desconocido";
+            break;
+
+        case 14:
+            consejo_text.innerHTML = '"El desastre y la felicidad caminan de las manos."';
+            consejo_a_text.innerHTML = "- El Monje Rojo Rezo";
+            break;
+    
+        default:
+            consejo_text.innerHTML = '"Consejo"';
+            consejo_a_text.innerHTML = "-Autor";
+            break;
+    }
+
+    // console.log(RCT);
+    
+}
+// ----------------------------
 
 
 
