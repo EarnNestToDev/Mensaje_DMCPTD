@@ -61,7 +61,7 @@ function test(){
             break;
 
         case 4:
-            consejo_text.innerHTML = '"Amarse a uno mismo es sufrir el proceso mediante el cual enfrentamos nuestra propia oscuridad, es reconocer tanto virtudes como defectos, es tomar las desiciones que duelen en el momento pero que son fructiferas a largo plazo. Amarse es tener el coraje de hacer lo que debemos hacer por nuestro propio bien."';
+            consejo_text.innerHTML = '"Amarse a uno mismo es sufrir el proceso mediante el cual enfrentamos nuestra propia oscuridad, es reconocer tanto virtudes como defectos, es tomar las decisiones que duelen en el momento pero que son fructiferas a largo plazo. Amarse es tener el coraje de hacer lo que debemos hacer por nuestro propio bien."';
             consejo_a_text.innerHTML = "- Hombres Tradicionales";
             break;
 
@@ -76,7 +76,7 @@ function test(){
             break;
 
         case 7:
-            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, cuando éntres te sentirás en un verdadero aprieto pero cuando sálgas sentirás un verdadero alivio."';
+            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, durante todo el camino te sentirás en un verdadero aprieto, no es hasta cuando sálgas que conseguirás el verdadero alivio."';
             consejo_a_text.innerHTML = "- EDLCC";
             break;
 
