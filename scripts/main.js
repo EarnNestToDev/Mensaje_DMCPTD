@@ -76,7 +76,7 @@ function test(){
             break;
 
         case 7:
-            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, cuando éntres te sentirás en un verdadero aprieto pero cuando salgas sentirás conseguirás el verdadero alivio."';
+            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, cuando éntres te sentirás en un verdadero aprieto pero cuando sálgas sentirás un verdadero alivio."';
             consejo_a_text.innerHTML = "- EDLCC";
             break;
 

@@ -396,8 +396,10 @@ nots {
 
 
 .consejo_text {
-    background-color: var(--rojo3);
-    font-style: italic;
+    /* background-color: var(--rojo3); */
+    background-color: whitesmoke;
+    /* font-style: italic; */
+    font-family: monospace;
     /* font-weight: bold; */
     text-align: justify;
 
@@ -409,6 +411,7 @@ nots {
 .consejo_autor_text {
     background-color: var(--rojo4);
     font-family: monospace;
+    font-weight: bold;
     text-align: center;
 
     border-radius: 0.5em;
@@ -418,7 +421,7 @@ nots {
 
 .consejos_frame button {
     background-color: var(--rojo1);
-    margin-top: 0.5em;
+    margin-top: 1.5em;
     width: 5em;
     height: 3em;
     border-radius: 0.5em;
