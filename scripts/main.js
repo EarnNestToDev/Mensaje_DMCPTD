@@ -36,7 +36,7 @@ function test(){
 
  //# ------ Consejo Random ------
  function CambiarConsejo(){
-    let RCT =  Math.floor(Math.random()*15);
+    let RCT =  Math.floor(Math.random()*16);
 
 
     switch (RCT) {
@@ -57,7 +57,7 @@ function test(){
 
         case 3:
             consejo_text.innerHTML = '"El hombre solo es verdaderamente libre cuando no tiene miedo de su propia sombra."';
-            consejo_a_text.innerHTML = "- Dostoievski";
+            consejo_a_text.innerHTML = "- Dostoyevski";
             break;
 
         case 4:
@@ -67,7 +67,7 @@ function test(){
 
         case 5:
             consejo_text.innerHTML = '"No sea excesivo, lanzate a la vida sin deliveraciones, no tengas miedo, la inundación te llevará y te pondrá de nuevo en pie."';
-            consejo_a_text.innerHTML = "- Dostoievski";
+            consejo_a_text.innerHTML = "- Dostoyevski";
             break;
 
         case 6:
@@ -114,10 +114,15 @@ function test(){
             consejo_text.innerHTML = '"El desastre y la felicidad caminan de las manos."';
             consejo_a_text.innerHTML = "- El Monje Rojo Rezo";
             break;
+
+        case 15:
+            consejo_text.innerHTML = '"Aveces, incluso vivir puede ser un acto de coraje."';
+            consejo_a_text.innerHTML = "- Séneca el Joven";
+            break;
     
         default:
-            consejo_text.innerHTML = '"Consejo"';
-            consejo_a_text.innerHTML = "-Autor";
+            consejo_text.innerHTML = '"Creo que esto es un bug, presiona otra vez el botón jaja"';
+            consejo_a_text.innerHTML = "- Te quiero ♥";
             break;
     }
 
@@ -536,23 +541,23 @@ function CambiarEstadoBitacora(){
             break;
 
         case 3:
-            HoraYPensamiento(19,'Estoy escuchando Heart To Heart [https://youtu.be/qBoQzo98EpQ?si=wLO16e9OcWa4qYGo] y al escuchar el minuto 1:03 me pegó una tristéza profunda escribiendo el mensaje, esperé a que términara la canción para escribir esto.', 'received');
+            HoraYPensamiento(19,'Estoy escuchando \'Heart To Heart\'  y al escuchar el minuto 1:03 me pegó una tristéza profunda escribiendo el mensaje, esperé a que términara la canción para escribir esto.', 'received');
             break;
     
         case 4:
-            HoraYPensamiento(19,'7:57pm - Escuché Someone To Spend Time With [https://youtu.be/0C1cVATvlQk?si=gygumRCUthbGAE_2], una canción que me encanta por el ritmo lento y suave, la letra está hermosa y te la dedico como las anteriores que te he enviado, está en inglés pero te la dejo con subtitulos por si quieres prestar atención...', 'received');
+            HoraYPensamiento(19,'7:57pm - Escuché \'Someone To Spend Time With\', una canción que me encanta por el ritmo lento y suave, la letra está hermosa y te la dedico como las anteriores que te he enviado, está en inglés pero te la dejo con subtitulos por si quieres prestar atención...', 'received');
             break;
 
         case 5:
-            HoraYPensamiento(20,'8:11pm - Rises the moon [https://youtu.be/-2yAEUp9v6M?si=nsMpG1CzwCKnuuVO], aunque no le entienda, solo puedo decir que me encanta ese ritmo.', 'received');
+            HoraYPensamiento(20,'8:11pm - \'Rises the moon\' , aunque no le entienda, solo puedo decir que me encanta ese ritmo.', 'received');
             break;
 
         case 6:
-            HoraYPensamiento(20,'8:28pm - Besame Mucho [https://youtu.be/7ejA6VDP4Ps?si=hGPuFl5dF0CUc2MO], me recordó a que ya quiero enviarte el reel pero creo que me aguataré hasta las 9 o mas tardecito, no quiero verme tan desesperado.', 'received');
+            HoraYPensamiento(20,'8:28pm - \'Besame Mucho\', me recordó a que ya quiero enviarte el reel pero creo que me aguataré hasta las 9 o mas tardecito, no quiero verme tan desesperado.', 'received');
             break;
 
         case 7:
-            HoraYPensamiento(20,'8:30pm - Ylang Ylang [https://youtu.be/4TChuQgE8pw?si=w7sD-XZLYjDGrBAt], ptm esta si pegó duro jaja, me detendré a contemplarla un poco y seguiré.', 'received');
+            HoraYPensamiento(20,'8:30pm - \'Ylang Ylang\', ptm esta si pegó duro jaja, me detendré a contemplarla un poco y seguiré.', 'received');
             break;
 
         case 8:
@@ -560,7 +565,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 9:
-            HoraYPensamiento(21,'9:02pm - Estoy escuchando YKWIM? [https://youtu.be/_C9rRLDimfQ?si=bn5cD1nkafgBF8Dw], tan solo el principio repentino me hizo recordarte por alguna razón, me duele esperar ese mensaje... me duele mucho. No sé si solo lo estoy sobrepensando pero es así como sentias esperar un mensaje mío?, perdoname por tanto, jamás me imaginé este dolor.', 'received');
+            HoraYPensamiento(21,'9:02pm - Estoy escuchando \'YKWIM?\', tan solo el principio repentino me hizo recordarte por alguna razón, me duele esperar ese mensaje... me duele mucho. No sé si solo lo estoy sobrepensando pero es así como sentias esperar un mensaje mío?, perdoname por tanto, jamás me imaginé este dolor.', 'received');
             break;
 
         case 10:
@@ -568,7 +573,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 11:
-            HoraYPensamiento(21,'9:30pm - Lover is day [https://youtu.be/ZCzPoj1TZDc?si=mEhs2PC4Sj-yRnjO], una canción que me cautivó con ese ritmo tan suave, la primera vez que lo escuché fue en el 2017, a día de hoy no ha dejado de gustarme. Recientemente escuché el significado de la letra y cuanta coincidencia jaja [https://youtube.com/shorts/CQYMIRTZZgk?si=LfVaf_esaP7pROqz].', 'received');
+            HoraYPensamiento(21,'9:30pm - \'Lover is day\', una canción que me cautivó con ese ritmo tan suave, la primera vez que lo escuché fue en el 2017, a día de hoy no ha dejado de gustarme. Recientemente escuché el significado de la letra y cuanta coincidencia jaja [ https://youtube.com/shorts/CQYMIRTZZgk?si=LfVaf_esaP7pROqz ].', 'received');
             break;
 
         case 12:
@@ -580,7 +585,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 14:
-            HoraYPensamiento(22,'10:01pm - Suena Young [https://youtu.be/oAur1xQx-sc?si=KEA6-QuWZyeHyVSI], revisé el celular y ni una reacción, perdoname por tanto dolor que te causé, realmente te extraño. Extraño esa personita tan energética y apasionada que me mostraste alguna vez.', 'received');
+            HoraYPensamiento(22,'10:01pm - \'Suena Young\', revisé el celular y ni una reacción, perdoname por tanto dolor que te causé, realmente te extraño. Extraño esa personita tan energética y apasionada que me mostraste alguna vez.', 'received');
             break;
 
         case 15:
@@ -774,7 +779,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 62:
-            HoraYPensamiento(23,'11:46pm - Sonó La Vie En Rose [https://youtu.be/Egyg8wN6NH0?si=ovUvN3LexhBYqtWL] y me provocó el mismo sentimiento que la primera vez que te la mostré ♥.', 'received');
+            HoraYPensamiento(23,'11:46pm - Sonó \'La Vie En Rose\' y me provocó el mismo sentimiento que la primera vez que te la mostré ♥.', 'received');
             break;
 
         case 63:
@@ -799,7 +804,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 68:
-            HoraYPensamiento(13,'1:17pm - Suena Hey [https://www.youtube.com/watch?v=ioUdxh9XyeI], me llegó al alma esas palabras, espero que estés bien cariño.', 'received');
+            HoraYPensamiento(13,'1:17pm - Suena \'Hey\', me llegó al alma esas palabras, espero que estés bien cariño.', 'received');
             break;
 
         case 69:
@@ -832,7 +837,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 76:
-            HoraYPensamiento(1,'12:43am - Esta vez si he podido escribir mucho jaja, pero ya me ganó el sueño. No te lo puedo decir por mi promesa, pero, descansa, te quiero.', 'received');
+            HoraYPensamiento(1,'12:43am - Esta vez sí he podido escribir mucho jaja, pero ya me ganó el sueño. No te lo puedo decir por mi promesa, pero, descansa, te quiero.', 'received');
             break;
 
         case 77:
@@ -844,7 +849,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 79:
-            HoraYPensamiento(13,'Hablando de celos, cuales serán los que según tú yo te hice?, siempre se me quedó la duda en cuando me lo dijiste jaja, por más que analicé no doy con ni una pista, según yo no he hecho nada malo o al menos no con esa intensión.', 'received');
+            HoraYPensamiento(13,'Hablando de celos, cuáles serán los que según tú yo te hice?, siempre se me quedó la duda en cuando me lo dijiste jaja, por más que analicé no doy con ni una pista, según yo no he hecho nada malo o al menos no con esa intensión.', 'received');
             break;
 
         case 80:
@@ -889,7 +894,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 90:
-            HoraYPensamiento(21,'9:06pm - Heart to heart, simplemente adecuada para este tipo de momentos.', 'received');
+            HoraYPensamiento(21,'9:06pm - \'Heart to heart\', simplemente adecuada para este tipo de momentos.', 'received');
             break;
 
         case 91:
@@ -905,7 +910,7 @@ function CambiarEstadoBitacora(){
             break;
 
         case 93:
-            HoraYPensamiento(21,'Cada vez que escucho Sabor a Mí la letra me recuerda mucho a tí', 'received');
+            HoraYPensamiento(21,'Cada vez que escucho \'Sabor a Mí\', la letra me recuerda mucho a tí', 'received');
             break;
 
         case 94:
