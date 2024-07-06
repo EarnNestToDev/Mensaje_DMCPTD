@@ -397,7 +397,7 @@ nots {
 
 .consejo_text {
     /* background-color: var(--rojo3); */
-    background-color: whitesmoke;
+    background-color: white;
     /* font-style: italic; */
     font-family: monospace;
     /* font-weight: bold; */
@@ -409,7 +409,7 @@ nots {
 }
 
 .consejo_autor_text {
-    background-color: var(--rojo4);
+    background-color: whitesmoke;
     font-family: monospace;
     font-weight: bold;
     text-align: center;

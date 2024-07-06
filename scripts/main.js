@@ -36,7 +36,7 @@ function test(){
 
  //# ------ Consejo Random ------
  function CambiarConsejo(){
-    let RCT =  Math.floor(Math.random()*16);
+    let RCT =  Math.floor(Math.random()*19);
 
 
     switch (RCT) {
@@ -118,6 +118,21 @@ function test(){
         case 15:
             consejo_text.innerHTML = '"Aveces, incluso vivir puede ser un acto de coraje."';
             consejo_a_text.innerHTML = "- Séneca el Joven";
+            break;
+
+        case 16:
+            consejo_text.innerHTML = '"Mientras el deseo nos asalta surgiendo sin previo aviso, el acto de amar es una elección, nace de nosotros y se proyecta hacia el otro."';
+            consejo_a_text.innerHTML = "- Farid Dieck";
+            break;
+
+        case 17:
+            consejo_text.innerHTML = '"Tú podrás ser cualquier persona para el resto del mundo, pero para mí tú eres el mundo."';
+            consejo_a_text.innerHTML = "- Doctor Seuss";
+            break;
+
+        case 18:
+            consejo_text.innerHTML = '"Es cierto, tal vez haya más personas como tú, pero a mis ojos eres única, porque yo puedo ver ese brillo que te distingue del resto."';
+            consejo_a_text.innerHTML = "- EDLCC";
             break;
     
         default:
