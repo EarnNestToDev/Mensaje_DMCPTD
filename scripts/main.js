@@ -36,7 +36,7 @@ function test(){
 
  //# ------ Consejo Random ------
  function CambiarConsejo(){
-    let RCT =  Math.floor(Math.random()*19);
+    let RCT =  Math.floor(Math.random()*23);
 
 
     switch (RCT) {
@@ -76,7 +76,7 @@ function test(){
             break;
 
         case 7:
-            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, durante todo el camino te sentirás en un verdadero aprieto, no es hasta cuando sálgas que conseguirás el verdadero alivio."';
+            consejo_text.innerHTML = '"La vida es como un tubo, hay una entrada y una salida, durante todo el camino te sentirás en un verdadero aprieto, no es hasta cuando sálgas por el otro lado que conseguirás el verdadero alivio."';
             consejo_a_text.innerHTML = "- EDLCC";
             break;
 
@@ -133,6 +133,26 @@ function test(){
         case 18:
             consejo_text.innerHTML = '"Es cierto, tal vez haya más personas como tú, pero a mis ojos eres única, porque yo puedo ver ese brillo que te distingue del resto."';
             consejo_a_text.innerHTML = "- EDLCC";
+            break;
+
+        case 19:
+            consejo_text.innerHTML = '"Reír es arriesgarse a parecer tonto.<br />Llorar es arriesgarse a parecer sensible.<br />Acercarse a otro es arriesgarse al compromiso.<br />Exponer sentimientos es arriesgarse a exponer tu ser.<br />Amar es arriesgarse a no ser amado.<br />Tener esperanza es arriesgarse a la desilusión.<br />Intentar es arriesgarse al fracaso."';
+            consejo_a_text.innerHTML = "- Leo Buscaglia";
+            break;
+
+        case 20:
+            consejo_text.innerHTML = '"La única manera que tenemos de vencer a la muerte es viviendo.<br />Y no se puede vivir teniendo miedo."';
+            consejo_a_text.innerHTML = "- Hombre Pretencioso";
+            break;
+
+        case 21:
+            consejo_text.innerHTML = '"Dios concédeme serenidad para aceptar las cosas que no puedo cambiar.<br />Valor para cambiar las que sí puedo.<br />Y sabiduría para distinguir la diferencia."';
+            consejo_a_text.innerHTML = "- N/A";
+            break;
+
+        case 22:
+            consejo_text.innerHTML = '"Que la maldad del hombre no te estorbe, ni su opinión, ni sus palabras."';
+            consejo_a_text.innerHTML = "- Marco Aurelio";
             break;
     
         default:
